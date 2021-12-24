@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import time
+
+t0=time.time()
 
 """
 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
@@ -14,10 +17,12 @@ for i in range(1, max_num+1):
 		if number%m == 0:
 			number = number/m
 		else:
-			pass
-	num_list.append(int(number))
-	
+				pass
+		num_list.append(int(number))
+		
 result =1 
 for i in num_list:
 	result = result*i
 print(result)
+
+print(time.time()-t0)
